@@ -41,7 +41,7 @@ Individual Punctuation = Reputation + Up Votes -Down Votes
 * Finally, we track the activity of the top 3 users over time in terms of post history (see graphs below)
 
 # Results
-In this notebook we present the results for the Bitcoin data base (graphs for questions/answers in general, graphs for questions/answers of top users, and the top questions/answers in general). However in this repository you can find the graphs (and top responses) for the Ethereum and Economica data bases as well 
+In this notebook we present the results for the Bitcoin data base (graphs for questions/answers in general, graphs for questions/answers of top users, and the top questions/answers in general). However in this repository you can find the graphs (and top responses) for the Ethereum (flowuether.png, EtherQA.odt) and Economics (flowuecon.png, EconQA.odt)  data bases as well 
 
 ## Flow chart of questions/answers
 Here we show a graph with the flow of questions/answers for the three data bases (Bitcoin, Ethereum, Economics) over time
