@@ -1,6 +1,10 @@
 # Stack-Exchange-Data-Dump
 In this repository, we analyze data from Stack Exchange Data Dump. We use python and aim to find "good" questions, answers, users and visualize the flow of questions/answers over time.
 
+Here a video proposal of this project
+
+https://youtu.be/LQ_LLQ2v14w
+
 # The data
 We are using information from the Stack Exchange Data Dump. To start we are analizing the flow of the bitcoin, ethereum, and economics data bases. 
 
