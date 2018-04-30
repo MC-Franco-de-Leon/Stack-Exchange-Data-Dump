@@ -18,3 +18,23 @@ run.py
 
 This code is dividede into different sections
 
+* From xml to csv: In this section we use Apache Spark to read the xml files and transform those to csv files, of course this step is quick since we use distributed computing
+
+* In the next step we read the users_csv files to find the top 10 questions/answers according to their score
+
+* Then we find the questions associated with the top 10 responses
+
+* Next we find the accepted answers (if they exists) of the top 10 questions
+
+* We display (see examples below) the top 3 (of each cathegory) of our results
+
+* Then we focus in the flow of questions/answers of each data base over time
+
+* Next we focus in the users_csv files to find top responder according to our own metric
+
+Individual Punctuation = Reputation + Up Votes -Down Votes
+
+* Once we find the top 10 users we display relevant information fo further analysis such as: Location, Age, and About Me 
+
+* Finally, we track the activity of the top 3 users over time in terms of post history
+
