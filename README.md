@@ -26,15 +26,15 @@ This code is dividede into different sections
 
 * Next we find the accepted answers (if they exists) of the top 10 questions
 
-* We display (see examples below) the top 3 (of each cathegory) of our results
+* We display (see examples below) the top 3 (of each cathegory) of our results: Top 3 questions, top 3 accepted answers, top 3 answers
 
-* Then we focus in the flow of questions/answers of each data base over time
+* Then we focus in the flow of questions/answers of each data base over time (see graphs below)
 
 * Next we focus in the users_csv files to find top responder according to our own metric
 
 Individual Punctuation = Reputation + Up Votes -Down Votes
 
-* Once we find the top 10 users we display relevant information fo further analysis such as: Location, Age, and About Me 
+* Once we find the top 10 users we display relevant information for further analysis such as: Location, Age, and About Me 
 
-* Finally, we track the activity of the top 3 users over time in terms of post history
+* Finally, we track the activity of the top 3 users over time in terms of post history (see graphs below)
 
