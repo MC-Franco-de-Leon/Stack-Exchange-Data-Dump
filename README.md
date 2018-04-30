@@ -45,6 +45,16 @@ Here we show a graph with the flow of questions/answers for the three data bases
 
 ![flowquestions](https://user-images.githubusercontent.com/13289981/39436333-85353ece-4c52-11e8-8a06-ad985140e93e.png)
 
+We oberve from the graph
+
+* The flow of questions and answers behave the same in each case (graph of questions is similar to those of answers), with a little bit more of answers than questions
+
+* The graph of Ethereum appears later in 2015, which make sense according to its official appearence in July 2015.
+
+* From 2016-2018 there are more questions/answers about Bitcoin and Ethertum than questions/answers about economics in general, with a notorius maximum at the end of 2017
+
+* from 2013-2018 the amount of questions/answers about economics has remain about 150-250 per month
+
 ## From Bitcoin Data Base 
 
 ### From Top 3 questions:
