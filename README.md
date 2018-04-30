@@ -94,3 +94,11 @@ We oberve from the graph and our analysis the following facts:
 
 There is a lot more ot do with this data base including
 
+* Analize the time for questions to be responded
+
+* Find geographic clusters of top responders, as well as the most common ocupations/jobs
+
+* Meta analize  the data sets to find top responders in different topics
+
+* In the particular case of Bitcoins and Ethereum, it is possible to compare this graphs with historical data of stock prices from yahoo finance
+
