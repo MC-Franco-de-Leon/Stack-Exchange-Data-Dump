@@ -41,10 +41,10 @@ Individual Punctuation = Reputation + Up Votes -Down Votes
 * Finally, we track the activity of the top 3 users over time in terms of post history (see graphs below)
 
 # Results
-In this notebook we present the results for the Bitcoin data base (graphs for questions/answers in general, graphs for questions/answers of top users, and the top questions/answers ). Hoiwever in this repository you can find the graphs (and top responses) for the Ethereum and Economica data bases as well 
+In this notebook we present the results for the Bitcoin data base (graphs for questions/answers in general, graphs for questions/answers of top users, and the top questions/answers in general). However in this repository you can find the graphs (and top responses) for the Ethereum and Economica data bases as well 
 
 ## Flow chart of questions/answers
-Here we show a graph with the flow of questions/answers for the three data bases (Bitcoin, Ethertum, Economics) over time
+Here we show a graph with the flow of questions/answers for the three data bases (Bitcoin, Ethereum, Economics) over time
 
 ![flowquestions](https://user-images.githubusercontent.com/13289981/39436333-85353ece-4c52-11e8-8a06-ad985140e93e.png)
 
@@ -54,7 +54,7 @@ We oberve from the graph the following facts:
 
 * The graph of Ethereum appears later in 2015, which make sense according to its official appearence in July 2015.
 
-* From 2016-2018 there are more questions/answers about Bitcoin and Ethertum than questions/answers about economics in general, with a notorius maximum at the end of 2017
+* From 2016-2018 there are more questions/answers about Bitcoin and Ethereum than questions/answers about economics in general, with a notorius maximum at the end of 2017
 
 * From 2013-2018 the amount of questions/answers about economics has remain about 150-250 per month
 ## Flow chart of questions/answers for top 3 users
@@ -90,4 +90,7 @@ We oberve from the graph and our analysis the following facts:
 
 
 
+# Further ideas
+
+There is a lot more ot do with this data base including
 
