@@ -41,6 +41,9 @@ Individual Punctuation = Reputation + Up Votes -Down Votes
 * Finally, we track the activity of the top 3 users over time in terms of post history (see graphs below)
 
 # Results
+Here we show a graph with the flow of questions/answers for the three data bases (Bitcoin, Ethertum, Economics) over time
+
+![flowquestions](https://user-images.githubusercontent.com/13289981/39436333-85353ece-4c52-11e8-8a06-ad985140e93e.png)
 
 ## From Bitcoin Data Base 
 
