@@ -60,9 +60,11 @@ We oberve from the graph the following facts:
 
 ![flowubitcoin](https://user-images.githubusercontent.com/13289981/39437076-a71f70fc-4c54-11e8-9b24-e80e30d9903e.png)
 
-We oberve from the graph the following facts:
+We oberve from the graph and our analysis the following facts:
 
 * With exeption of one user, the amount of answers is significantly bigger than the amount of questions posted for the top 3 users according to our metric. This may also be a way to identify **difficult questions** (I mean questions posted by highly experienced users)
+
+* From the top 10 responders 3/10 are from California, most of them are 30+ years old, they are developers, work in finance, cryptography, computer science or related fields
 
 
 ## Answers/Questions from Bitcoin Data Base 
