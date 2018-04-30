@@ -41,11 +41,13 @@ Individual Punctuation = Reputation + Up Votes -Down Votes
 * Finally, we track the activity of the top 3 users over time in terms of post history (see graphs below)
 
 # Results
+
+## Flow chart of questions/answers
 Here we show a graph with the flow of questions/answers for the three data bases (Bitcoin, Ethertum, Economics) over time
 
 ![flowquestions](https://user-images.githubusercontent.com/13289981/39436333-85353ece-4c52-11e8-8a06-ad985140e93e.png)
 
-We oberve from the graph
+We oberve from the graph the following facts:
 
 * The flow of questions and answers behave the same in each case (graph of questions is similar to those of answers), with a little bit more of answers than questions
 
@@ -53,9 +55,11 @@ We oberve from the graph
 
 * From 2016-2018 there are more questions/answers about Bitcoin and Ethertum than questions/answers about economics in general, with a notorius maximum at the end of 2017
 
-* from 2013-2018 the amount of questions/answers about economics has remain about 150-250 per month
+* From 2013-2018 the amount of questions/answers about economics has remain about 150-250 per month
+## Flow chart of questions/answers for top users
 
-## From Bitcoin Data Base 
+
+## Answers/Questions from Bitcoin Data Base 
 
 ### From Top 3 questions:
                                                                                             
