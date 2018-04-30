@@ -56,7 +56,13 @@ We oberve from the graph the following facts:
 * From 2016-2018 there are more questions/answers about Bitcoin and Ethertum than questions/answers about economics in general, with a notorius maximum at the end of 2017
 
 * From 2013-2018 the amount of questions/answers about economics has remain about 150-250 per month
-## Flow chart of questions/answers for top users
+## Flow chart of questions/answers for top 3 users
+
+![flowubitcoin](https://user-images.githubusercontent.com/13289981/39437076-a71f70fc-4c54-11e8-9b24-e80e30d9903e.png)
+
+We oberve from the graph the following facts:
+
+* With exeption of one user, the amount of answers is significantly bigger than the amount of questions posted for top 3 users according to our metris. This may also be a way to identify **difficult questions** (I mean questions posted by highly experienced users)
 
 
 ## Answers/Questions from Bitcoin Data Base 
