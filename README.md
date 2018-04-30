@@ -62,7 +62,7 @@ We oberve from the graph the following facts:
 
 We oberve from the graph the following facts:
 
-* With exeption of one user, the amount of answers is significantly bigger than the amount of questions posted for top 3 users according to our metris. This may also be a way to identify **difficult questions** (I mean questions posted by highly experienced users)
+* With exeption of one user, the amount of answers is significantly bigger than the amount of questions posted for the top 3 users according to our metric. This may also be a way to identify **difficult questions** (I mean questions posted by highly experienced users)
 
 
 ## Answers/Questions from Bitcoin Data Base 
