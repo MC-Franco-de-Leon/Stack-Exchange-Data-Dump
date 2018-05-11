@@ -1,0 +1,78 @@
+import matplotlib.pyplot as plt
+import csv
+import os, os.path
+import pandas as pd
+import numpy as np
+
+os.chdir('./posts_csv')	
+def RepresentsInt(s):
+    try: 
+        int(s)
+        return True
+    except ValueError:
+        return False
+
+
+df = pd.read_csv('outposts.csv', skiprows=2,names=['Id','PostTypeId','AcceptedAnswerId','ParentId','CreationDate','DeletionDte','Score','ViewCount','Body','OwnerUserId','OwnerDisplayName','LastEditorUserId','LastEditorDisplayName','LastEditDate','LastActivityDate','Title','Tags','AnswerCount','CommentCount','FavoriteCount','ClosedDate','CommunityOwnedDate'])
+dfQ=df.loc[df['PostTypeId'] == 1]
+dfA=df.loc[df['PostTypeId'] == 2]
+
+#first we find the list of accepted answers
+listanswers=[]
+for index, row in dfQ.iterrows():
+	if str(row['AcceptedAnswerId'])!='nan':
+		listanswers.append(int(row['AcceptedAnswerId']))
+owners=[[]]
+
+
+
+for index, row in dfA.iterrows():
+	length=0
+	reference=0
+	accepted=0
+	scor=0
+	if int(row['Id']) in listanswers:
+		accepted=.25
+	if row['Score']>0:
+		scor=( 1-(1/row['Score']) )/4
+	if len(row['Body'])>0:
+		length=(1- (1/len(row['Body'])))/4
+	if row['Body'].find('http')>0:
+		reference=.25
+	postscore=accepted+scor+length+reference
+	#print(accepted, scor, length, reference)
+
+	k=0
+	lookuser=0
+
+	if RepresentsInt(row['OwnerUserId']):
+		y=int(row['OwnerUserId'])
+		while (k < len(owners)) & (lookuser==0):#look if user already exists to update
+			if not owners[k]:
+				owners[0]=[y,postscore]
+				lookuser=1
+			else:
+				item=owners[k]
+				if item[0]==y:#the user already exist
+					lookuser=1#update session
+					owners[k]=[y,item[1]+postscore]
+				elif (k==len(owners)-1):#new user at the end
+					owners.append([y,postscore])
+					lookuser=1
+				else:#keep looking
+					k+=1
+	#print(owners)
+
+
+
+
+
+
+sortedA=sorted(owners,key=lambda x:x[1])
+
+
+#print('head',sortedA[0:10])
+print('tail',sortedA[-10:])
+
+
+
