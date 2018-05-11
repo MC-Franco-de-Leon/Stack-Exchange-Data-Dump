@@ -92,6 +92,29 @@ We oberve from the graph and our analysis the following facts:
 
 [384    &lt;p&gt;&lt;a href=&quot;https://www.technologyreview.com/computing/38392/?p1=featured&quot;&gt;Some people believe that hoarding hurts the Bitcoin economy&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;But are they really right?&lt;/p&gt;&#xA;&#xA;&lt;p&gt;As long as corresponding goods vendors and services will be here to stay and reinforce people's faith in Bitcoin, hoarded bitcoins simply do not take part in daily business and do not hurt anyone.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Quite the contrary, they will &lt;em&gt;decrease&lt;/em&gt; the supply of bitcoins in active circulation, thus &lt;em&gt;increase&lt;/em&gt; the demand for bitcoins, and thus &lt;em&gt;raise&lt;/em&gt; their over-all value, right?&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Update: This question also comes with a premise or insight that Bitcoin &quot;power users&quot; have savings and spendings wallets or similar setups, and that those two forms of wallets will not tend to &quot;compete&quot; with each other so much. The bitcoins in the spendings wallets will rather compete with the fiat money that respective users will use to buy for goods and services. The bitcoins in the savings wallets will rather compete with more traditional forms of assets and investments.&lt;/p&gt;&#xA;
 
+# Further analysis
+
+The code "newanalysis" is ordering users accoriding to the reputation field. We are including another code called "newmetric" in which we consider the following parameters for each answer (from the posts file)
+
+* Length in characters of the "Body" text, so longer answers are presumably more detailed
+
+* We give a positive score if the "Body" includes the word http, so presumably this user is doing a bit more of research on the subject by giving references  
+
+* If the answer was accepted it counts as positive
+
+* We consider the score of the answer=Up-Down votes
+
+Each one of this fields has a maximum value of 1/4=.25. For example is an answer was accepted then the score is .25, if the "Body" contains "http" then it counts .25 more. For the fields Score and Length, we consider that a bigger "value" must represent a better "score". Hence these fields will have a value of (1-(1/value))/4. Then, we add these scores per answer and find the user associated to that answer and update his/her score. Our results with this new metric coincide with those using the reputation of the user in the first 9 places (for the Bitcoin data set)
+
+In other words, the Id of the top 10 users (ascending order) using the "reputation" field are
+
+[78, 5757, 575, 48884, 2306, 153, 323, 5406, 208, 85]
+
+On the other hand, the top 10 users (ascending order) using our own metric are
+
+[51948, 575, 323, 5757, 48884, 153, 2306, 85, 208, 5406]
+
+
 
 
 # Further ideas
