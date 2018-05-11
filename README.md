@@ -61,6 +61,12 @@ We oberve from the graph the following facts:
 * From 2016-2018 there are more questions/answers about Bitcoin and Ethereum than questions/answers about economics in general, with a notorius maximum at the end of 2017
 
 * From 2013-2018 the amount of questions/answers about economics has remain about 150-250 per month
+
+We add below a graph of the close stock prices for Bitcoin in the same period, we see that aroun the same period where BTC was going up it also raised more concerns.
+
+![btcprice](https://user-images.githubusercontent.com/13289981/39912166-abcb8580-54b2-11e8-977f-c5121d52236b.png)
+
+
 ## Flow chart of questions/answers for top 3 users
 
 ![flowubitcoin](https://user-images.githubusercontent.com/13289981/39437076-a71f70fc-4c54-11e8-9b24-e80e30d9903e.png)
