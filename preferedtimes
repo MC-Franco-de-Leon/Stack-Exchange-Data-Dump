@@ -1,0 +1,125 @@
+
+import matplotlib.pyplot as plt
+import csv
+import os, os.path
+import pandas as pd
+import numpy as np
+
+os.chdir('./users_csv')
+
+df = pd.read_csv('outusers.csv', skiprows=2,names=['Id','Reputation', 'CreationDate','DisplayName','LastAccessDate','WebsiteUrl','Location','AboutMe','Views','UpVotes','DownVotes','EmailHash','Age','AccountId'])
+
+df['MyPunctuation']=0
+
+rep=0
+up=0
+down=0
+
+for index, row in df.iterrows():
+	rep=0
+	up=0
+	down=0
+	if str(row['Reputation'])!='nan':
+		rep=int(row['Reputation'])
+	if str(row['UpVotes'])!='nan':
+		up=int(row['UpVotes'])
+	if str(row['DownVotes'])!='nan':
+		down=int(row['DownVotes'])
+	df.iloc[index, df.columns.get_loc('MyPunctuation')] = rep
+
+
+Ubyscore=df.sort_values(by=['MyPunctuation']).iloc[-10:]
+print(Ubyscore[['Id','Location','Age','AboutMe']])
+
+# now we save the user id of those top responders
+users=[]
+for index, row in Ubyscore.iterrows():
+	users.append(int(row['Id']))
+
+print('Id of top users: ',users)
+#***************************************************************************
+#####*** finally we track the post history of questions/answer of the top 3 users
+#***************************************************************************
+os.chdir('..')
+os.chdir('./posts_csv')
+df = pd.read_csv('outposts.csv', skiprows=2,names=['Id','PostTypeId','AcceptedAnswerId','ParentId','CreationDate','DeletionDte','Score','ViewCount','Body','OwnerUserId','OwnerDisplayName','LastEditorUserId','LastEditorDisplayName','LastEditDate','LastActivityDate','Title','Tags','AnswerCount','CommentCount','FavoriteCount','ClosedDate','CommunityOwnedDate'])
+dfQ=df.loc[df['PostTypeId'] == 1]
+dfA=df.loc[df['PostTypeId'] == 2]
+
+timeq=[[],[],[]]
+vecq=[[],[],[]]
+timea=[[],[],[]]
+veca=[[],[],[]]
+for i in range(0,3):
+	print('**new user**')		
+	dfuQ=dfQ.loc[df['OwnerUserId'] == users[i]]	
+	dfuA=dfA.loc[df['OwnerUserId'] == users[i]]
+
+	dfuA['hour']=0
+#	print(dfuA.head())
+	flowa=[[]]
+
+	for index, row in dfuA.iterrows():
+		y=int(row['CreationDate'][0:4])
+		m=int(row['CreationDate'][5:7])
+		d=int(row['CreationDate'][8:10])
+		h=int(row['CreationDate'][11:13])
+		dfuA.hour[index]=h
+		#print(dfuA.day[index])
+		#print(y,m,d,h)
+		k=0
+		looksession=0
+		while (k < len(flowa)) & (looksession==0):#look if session already exists to update
+			if not flowa[k]:
+				flowa[0]=[y,m,1]
+				looksession=1
+			else:
+				item=flowa[k]
+				if item[0]==y and item[1]==m:#the year and month already exist
+					looksession=1#update session
+					flowa[k]=[y,m,item[2]+1]
+				elif (k==len(flowa)-1):#open new session
+					flowa.append([y,m,1])
+					looksession=1
+				else:#keep looking
+					k+=1
+	flowasorted=sorted(flowa)
+
+	m=len(flowasorted)
+	timea[i]=np.linspace(flowasorted[0][0], flowasorted[m-1][0], m)
+	#veca[i]=[]
+	n=len(flowa)
+	for j in range(0,n):
+		veca[i].append(flowasorted[j][2])
+	df_top_hours = dfuA.groupby(['hour'])['hour'].agg({"code_count": len}).sort_values("code_count", ascending=False).reset_index()
+	print(df_top_hours)
+
+	
+	listkeys=list(df_top_hours['hour'])
+	listcounter=list(df_top_hours['code_count'])
+	plt.pie(listcounter, labels=listkeys, startangle=90, autopct='%.1f%%')
+	plt.title('Most Popular hours to respond questions' )
+	plt.show()
+
+
+
+fig, ax = plt.subplots()
+
+
+ax.plot(timea[0], veca[0], 'r-',label='Answers user #1')
+ax.plot(timea[1], veca[1], 'g-',label='Answers user #2')
+ax.plot(timea[2], veca[2], 'b-',label='Answers user #3')
+legend = ax.legend(loc='upper center', shadow=True)
+frame = legend.get_frame()
+frame.set_facecolor('0.90')
+
+# Set the fontsize
+for label in legend.get_texts():
+    label.set_fontsize('large')
+
+for label in legend.get_lines():
+    label.set_linewidth(2.5)  # the legend line width
+
+plt.ylabel('Number of posts')
+plt.xlabel('Time')
+plt.show()
