@@ -120,6 +120,13 @@ On the other hand, the top 10 users (ascending order) using our own metric are
 
 [51948, 575, 323, 5757, 48884, 153, 2306, 85, 208, 5406]
 
+Below is also the analysis of the prefered hours to response questions of top 3 users in the Bitcoin dataset
+
+
+![preferenceuser1](https://user-images.githubusercontent.com/13289981/39914128-ed8e9be6-54b8-11e8-8954-6a7e2c92a0b0.png)
+![preferenceuser2](https://user-images.githubusercontent.com/13289981/39914129-ef2b1330-54b8-11e8-8103-dede7bbcbc84.png)
+
+
 
 
 
